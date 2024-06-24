@@ -1,0 +1,30 @@
+﻿<Window x:Class="LabWork45.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LabWork45"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <Label Content="Строка подключения:" Margin="10"/>
+            <Label x:Name="GetConnectionString" Margin="10"/>
+            
+            <Label Content="Введите SQL-команду для ExecuteScalar:" Margin="10"/>
+            <TextBox x:Name="ScalarCommandTextBox" Margin="10"/>
+            <Button Content="Execute Scalar" Click="ExecuteScalar_Click" Margin="10"/>
+            <Label x:Name="ScalarResultLabel" Margin="10"/>
+
+            <Label Content="Введите SQL-команду для ExecuteDataTable:" Margin="10"/>
+            <TextBox x:Name="DataTableCommandTextBox" Margin="10"/>
+            <Button Content="Execute DataTable" Click="ExecuteDataTable_Click" Margin="10"/>
+            <DataGrid x:Name="DataTableGrid" Margin="10" AutoGenerateColumns="True"/>
+
+            <Label Content="Введите SQL-команду для GetBooks:" Margin="10"/>
+            <TextBox x:Name="BooksCommandTextBox" Margin="10"/>
+            <Button Content="Get Books" Click="GetBooks_Click" Margin="10"/>
+            <DataGrid x:Name="BooksGrid" Margin="10" AutoGenerateColumns="True"/>
+        </StackPanel>
+    </Grid>
+</Window>
